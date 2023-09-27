@@ -16,7 +16,7 @@ export default function AuthenticationPage() {
     <>
       <div className="md:hidden">
         <Image
-          src="/images/authentication-light.png"
+          src="/images/auth.jpg"
           width={1280}
           height={843}
           alt="Authentication"
