@@ -6,23 +6,23 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 interface MainNavProps {
-    data: {
-        id: string;
-        name: string;
-    }[];
+  data: {
+    id: string;
+    name: string;
+  }[];
 }
 
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/${route.id}`,
+    href: `/`,
     label: route.name,
     active: pathname === `/${route.id}`,
   }));
 
   return (
-    <nav className='mx-6 flex items-center space-x-4 lg:space-x-6'>
+    <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
         <Link
           key={route.href}
