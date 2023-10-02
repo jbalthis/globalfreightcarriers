@@ -15,25 +15,35 @@ const Hero = () => {
     'bg-gradient-to-br from-blue-200 via-lime-300 to-indigo-800 text-transparent bg-clip-text';
 
   return (
-    <section
-      id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY} px-4 mx-4`}
+    <div
+      className={`
+        flex
+        md:flex-row
+        flex-col
+        ${styles.paddingY}
+        bg-[url('/images/truck.jpg')]
+        relative
+        overflow-hidden
+        bg-cover
+        bg-no-repeat
+        bg-center
+      `}
     >
       <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 py-6`}
       >
         <div
-          className={`flex flex-row items-center py-4 px-4 ${bg_discount_gradient} rounded-[10px] mb-2`}
+          className={`flex flex-row items-center py-4 px-4 ${bg_discount_gradient} rounded-[10px] mb-4`}
         >
-          <AreaChart className="w-[24px] h-[24px] text-white" />
-          <p className={`${styles.paragraph} ml-2`}>
+          <AreaChart className="w-[24px] h-[24px] text-white mx-2" />
+          <p className={`${styles.paragraph} ml-4`}>
             <span className="text-white">
               Over <span className="italic text-lime-300">20 years</span>{' '}
-              Freight Shipping Experience with
+              Freight Shipping Experience with the
             </span>
-            <br />
+
             <span className="text-white">
-              <span className="italic text-lime-300">Lowest</span> Freight
+              <span className="italic text-lime-300"> Lowest</span> Freight
               Hauling<span className="italic text-lime-300"> Rates</span> in
               North America
             </span>
@@ -54,7 +64,7 @@ const Hero = () => {
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
           Tranquility.
         </h1>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5 text-gray-800`}>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5 text-gray-100`}>
           Global Freight Carriers provides simple, affordable solutions for all
           your shipping needs, locally or globally. Whether it&apos;s oversize,
           expedited, refrigerated, or super loads, one call to us handles it
@@ -62,34 +72,10 @@ const Hero = () => {
         </p>
       </div>
 
-      <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
-      >
-        <Image
-          src="/images/hero.png"
-          alt="hero"
-          width={400}
-          height={400}
-          className="rounded-[10px] object-contain"
-        />
-
-        {/* gradient start */}
-        <div
-          className={`absolute z-[0] w-[40%] h-[35%] top-0 ${pink_gradiant} `}
-        />
-        <div
-          className={`absolute z-[1] w-[80%] h-[80%] rounded-full ${white_gradiant} bottom-40`}
-        />
-        <div
-          className={`absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 ${blue_gradiant}`}
-        />
-        {/* gradient end */}
-      </div>
-
-      <div className={`ss:hidden ${styles.flexCenter}`}>
+      <div className={`ss:hidden ${styles.flexCenter} mr-4`}>
         <GetStarted />
       </div>
-    </section>
+    </div>
   );
 };
 
