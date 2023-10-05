@@ -1,7 +1,7 @@
-import Hero from './components/hero';
-import Quote from './components/quote';
-import Cards from './components/cards';
-import Newsletter from './components/newsletter';
+import Hero from '../components/hero';
+import Quote from '../components/quote';
+import Cards from '../components/cards';
+import Newsletter from '../components/newsletter';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {

@@ -24,7 +24,7 @@ const NavbarActions = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center ml-4">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="flex items-center rounded-full bg-slate-700 px-4 py-2">
@@ -55,18 +55,15 @@ const NavbarActions = () => {
               </div>
 
               <div className="grid grid-cols-3 items-center gap-4">
-                <Button>Submit</Button>
+                <Button>Login</Button>
+                <Link href="/auth">
+                  <span className="text-sm text-blue-600">Or, Register</span>
+                </Link>
               </div>
             </div>
           </div>
         </PopoverContent>
       </Popover>
-
-      <Link href="/auth" className="flex items-center">
-        <span className="ml-2 text-xs font-medium text-slate-800">
-          Or, Sign Up
-        </span>
-      </Link>
     </div>
   );
 };
