@@ -6,8 +6,8 @@ import { ArrowRightCircle } from 'lucide-react';
 
 const Quote = () => {
   return (
-    <div className="flex flex-wrap justify-between p-4">
-      <div className="w-[50%] p-8">
+    <div className="flex flex-col xl:flex-row justify-between p-4">
+      <div className="basis-1/2 p-8">
         <h1 className="text-3xl font-bold mb-12">Get a Quote</h1>
         <p className="text-xl font-semibold my-8">
           We Have the Lowest Freight Hauling Rates in North America!
@@ -83,10 +83,11 @@ const Quote = () => {
           width={500}
           height={500}
           alt="truck"
-          className="rounded-md"
+          className="rounded-md mx-auto py-4"
+          style={{ objectFit: 'cover' }}
         />
       </div>
-      <div className="w-[50%] p-8">
+      <div className="basis-1/2 p-8">
         <QuoteForm />
       </div>
     </div>

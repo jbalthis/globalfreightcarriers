@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = async ({ className, children }) => {
           <Sidebar />
         </SheetContent>
       </Sheet>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 border border-b shadow-sm">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between xl:w-auto xl:static xl:block xl:justify-between">
             <Link

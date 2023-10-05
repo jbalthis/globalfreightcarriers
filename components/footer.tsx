@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Phone, Store } from 'lucide-react';
 import { CheckCircledIcon } from '@radix-ui/react-icons';
+import SocialLinks from './social-links';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="flex bg-gray-800 text-white justify-between gap-4 p-8">
         <div className="flex flex-col items-center px-4">
           <Image src="/images/logo.png" width={200} height={50} alt="logo" />
-          <p className="text-sm mt-4">
+          <p className="text-sm mt-8">
             We Ship Anything & Everything:
             <br />
             Frozen/Reefers, LTL, Full Loads,
@@ -27,7 +28,7 @@ const Footer = () => {
         <div className="flex flex-col">
           <h1 className="text-xl text-center font-semibold">Contact Us!</h1>
           <div className="flex mt-2">
-            <Store size={24} className="inline-block mt-6 mr-2" />
+            <Store size={24} className="inline-block mt-6 mr-2 text-lime-400" />
             <Link href="https://maps.app.goo.gl/DVGKVYRqiHa3FZYh7">
               <p className="text-sm p-4 inline-block flex-col">
                 26943 Westwood Rd, Suite B<br />
@@ -36,7 +37,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex">
-            <Phone size={24} className="inline-block mt-4 mr-2" />
+            <Phone size={24} className="inline-block mt-4 mr-2 text-lime-400" />
             <Link href="tel://+14408777447">
               <p className="text-sm p-4">(440)877-SHIP</p>
             </Link>
@@ -46,7 +47,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex">
-            <Mail size={24} className="inline-block mt-4 mr-2" />
+            <Mail size={24} className="inline-block mt-4 mr-2 text-lime-400" />
             <Link href="mailto:support@mygfcarrier.com">
               <p className="text-sm p-4">support@mygfcarrier.com</p>
             </Link>
@@ -102,9 +103,9 @@ const Footer = () => {
           <p className="text-md mt-4">7am - 7pm M-F</p>
         </div>
       </div>
-      <div className="bg-black text-white max-h-[100px]">
-        <div className="text-center">SOCIAL LINKS</div>
-        <p className="text-center p-4 text-xs">
+      <div className="bg-black text-white max-h-[140px]">
+        <SocialLinks />
+        <p className="text-center p-2 text-xs">
           © 2023 Global Freight Carriers
         </p>
       </div>

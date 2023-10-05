@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const Cards = () => {
   return (
-    <div className="p-4 my-8 grid grid-cols-2 gap-8">
+    <div className="p-8 my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
       <Card>
         <CardHeader
           className="
