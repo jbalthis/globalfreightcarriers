@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Sidebar from '@/components/sidebar';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
@@ -8,9 +8,11 @@ interface PublicLayoutProps {
 }
 
 const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
+
   return (
     <>
         <Navbar />
+        {/*<Sidebar />*/}
         {children}
         <Footer />
     </>

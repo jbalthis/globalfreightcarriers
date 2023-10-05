@@ -2,40 +2,26 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
+import useRoutes from '@/hooks/use-routes';
 import { cn } from '@/lib/utils';
+import PublicItem from './public-item';
 
-interface MainNavProps {
-  data: {
-    id: string;
-    name: string;
-  }[];
-}
-
-const MainNav: React.FC<MainNavProps> = ({ data }) => {
+const MainNav = ({}) => {
   const pathname = usePathname();
-
-  const routes = data.map((route) => ({
-    href: `/${route.name}`,
-    label: route.name,
-    active: pathname === `/${route.id}`,
-  }));
+  const routes = useRoutes();
 
   return (
-    <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
-      {routes.map((route) => (
-        <Link
-          key={route.href}
-          href={route.href}
-          className={cn(
-            'text-sm font-medium transition-colors hover:text-black',
-            route.active ? 'text-black' : 'text-neutral-500'
-          )}
-        >
-          {route.label}
-        </Link>
+    <ul role="list" className="flex flex-col lg:flex-row list-none lg:ml-auto">
+      {routes.map((item) => (
+        <PublicItem
+          key={item.label}
+          href={item.href}
+          label={item.label}
+          icon={item.icon}
+          active={item.active}
+        />
       ))}
-    </nav>
+    </ul>
   );
 };
 

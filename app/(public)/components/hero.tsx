@@ -30,7 +30,7 @@ const Hero = () => {
       `}
     >
       <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 py-6`}
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-4 sm:px-16 px-6 py-6`}
       >
         <div
           className={`flex flex-row items-center py-4 px-4 ${bg_discount_gradient} rounded-[10px] mb-4`}

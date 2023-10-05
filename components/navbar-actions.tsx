@@ -24,7 +24,7 @@ const NavbarActions = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="ml-auto flex items-center gap-x-4">
+    <div className="flex items-center">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="flex items-center rounded-full bg-slate-700 px-4 py-2">
