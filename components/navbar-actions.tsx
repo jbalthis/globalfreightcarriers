@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,9 +11,11 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { UserCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 const NavbarActions = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const [credentials, setCredentials] = useState({ email: '', password: '' });
 
   useEffect(() => {
     setIsMounted(true);
@@ -22,6 +24,17 @@ const NavbarActions = () => {
   const router = useRouter();
 
   if (!isMounted) return null;
+
+  const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const res = await fetch('http://localhost:3000/api/auth/authorize', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+  };
 
   return (
     <div className="flex items-center ml-4">
@@ -43,7 +56,16 @@ const NavbarActions = () => {
             <div className="grid gap-2">
               <div className="grid grid-cols-3 items-center gap-4">
                 <Label htmlFor="width">Email</Label>
-                <Input id="email" className="col-span-2 h-8" />
+                <Input
+                  id="email"
+                  className="col-span-2 h-8"
+                  onChange={(e) =>
+                    setCredentials({
+                      email: e.currentTarget.value,
+                      password: credentials.password,
+                    })
+                  }
+                />
               </div>
               <div className="grid grid-cols-3 items-center gap-4">
                 <Label htmlFor="maxWidth">Password</Label>
@@ -51,11 +73,27 @@ const NavbarActions = () => {
                   id="password"
                   type="password"
                   className="col-span-2 h-8"
+                  onChange={(e) =>
+                    setCredentials({
+                      email: credentials.email,
+                      password: e.currentTarget.value,
+                    })
+                  }
                 />
               </div>
 
               <div className="grid grid-cols-3 items-center gap-4">
-                <Button>Login</Button>
+                <Button
+                  onClick={() =>
+                    signIn('credentials', {
+                      callbackUrl: 'http://localhost:3000/auth/dashboard',
+                      email: credentials.email,
+                      password: credentials.password,
+                    })
+                  }
+                >
+                  Login
+                </Button>
                 <Link href="/auth">
                   <span className="text-sm text-blue-600">Or, Register</span>
                 </Link>

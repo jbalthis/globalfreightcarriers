@@ -1,32 +1,27 @@
-import { Metadata } from "next"
-import Image from "next/image"
+import { Metadata } from 'next';
+import Image from 'next/image';
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-import { CalendarDateRangePicker } from "@/app/auth/dashboard/components/date-range-picker"
-import { MainNav } from "@/app/auth/dashboard/components/main-nav"
-import { Overview } from "@/app/auth/dashboard/components/overview"
-import { RecentSales } from "@/app/auth/dashboard/components/recent-sales"
-import { Search } from "@/app/auth/dashboard/components/search"
-import TeamSwitcher from "@/app/auth/dashboard/components/team-switcher"
-import { UserNav } from "@/app/auth/dashboard/components/user-nav"
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CalendarDateRangePicker } from '@/app/auth/(routes)/dashboard/components/date-range-picker';
+import { MainNav } from '@/app/auth/(routes)/dashboard/components/main-nav';
+import { Overview } from '@/app/auth/(routes)/dashboard/components/overview';
+import { RecentSales } from '@/app/auth/(routes)/dashboard/components/recent-sales';
+import { Search } from '@/app/auth/(routes)/dashboard/components/search';
+import TeamSwitcher from '@/app/auth/(routes)/dashboard/components/team-switcher';
+import { UserNav } from '@/app/auth/(routes)/dashboard/components/user-nav';
 
 export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Example dashboard app built using the components.",
-}
+  title: 'Dashboard',
+  description: 'Example dashboard app built using the components.',
+};
 
 export default function DashboardPage() {
   return (
@@ -209,5 +204,5 @@ export default function DashboardPage() {
         </div>
       </div>
     </>
-  )
+  );
 }
