@@ -23,15 +23,15 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = async ({ className, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  //const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <Sheet open={isOpen}>
+      {/* <Sheet open={isOpen}>
         <SheetContent>
           <Sidebar />
         </SheetContent>
-      </Sheet>
+      </Sheet> */}
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 border border-b shadow-sm">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between xl:w-auto xl:static xl:block xl:justify-between">
@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = async ({ className, children }) => {
             </Link>
             <Button
               className="text-gray-800 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block xl:hidden outline-none focus:outline-none"
-              onClick={() => setIsOpen(true)}
+              // onClick={() => setIsOpen(true)}
             >
               <HamburgerMenuIcon />
             </Button>

@@ -22,6 +22,19 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["styles/*.ts", "components/*.tsx", "lib/*.ts", "types/*.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/*/*.tsx", "app/(public)/components/*.tsx", "app/auth/*.tsx", "app/auth/*/*.tsx", "providers/*.tsx"],
+  "include": [
+    "styles/*.ts",
+    "components/*.tsx",
+    "lib/*.ts",
+    "types/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/*/*.tsx",
+    "app/(public)/components/*.tsx",
+    "app/(protected)/*.tsx",
+    "app/(protected)/*/*.tsx",
+    "providers/*.tsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -10,13 +10,13 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CalendarDateRangePicker } from '@/app/auth/(routes)/dashboard/components/date-range-picker';
-import { MainNav } from '@/app/auth/(routes)/dashboard/components/main-nav';
-import { Overview } from '@/app/auth/(routes)/dashboard/components/overview';
-import { RecentSales } from '@/app/auth/(routes)/dashboard/components/recent-sales';
-import { Search } from '@/app/auth/(routes)/dashboard/components/search';
-import TeamSwitcher from '@/app/auth/(routes)/dashboard/components/team-switcher';
-import { UserNav } from '@/app/auth/(routes)/dashboard/components/user-nav';
+import { CalendarDateRangePicker } from '@/app/(protected)/(routes)/dashboard/components/date-range-picker';
+import { MainNav } from '@/app/(protected)/(routes)/dashboard/components/main-nav';
+import { Overview } from '@/app/(protected)/(routes)/dashboard/components/overview';
+import { RecentSales } from '@/app/(protected)/(routes)/dashboard/components/recent-sales';
+import { Search } from '@/app/(protected)/(routes)/dashboard/components/search';
+import TeamSwitcher from '@/app/(protected)/(routes)/dashboard/components/team-switcher';
+import { UserNav } from '@/app/(protected)/(routes)/dashboard/components/user-nav';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
