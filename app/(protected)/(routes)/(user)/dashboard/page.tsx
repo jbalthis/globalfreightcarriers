@@ -10,17 +10,17 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CalendarDateRangePicker } from '@/app/(protected)/(routes)/dashboard/components/date-range-picker';
-import { MainNav } from '@/app/(protected)/(routes)/dashboard/components/main-nav';
-import { Overview } from '@/app/(protected)/(routes)/dashboard/components/overview';
-import { RecentSales } from '@/app/(protected)/(routes)/dashboard/components/recent-sales';
-import { Search } from '@/app/(protected)/(routes)/dashboard/components/search';
-import TeamSwitcher from '@/app/(protected)/(routes)/dashboard/components/team-switcher';
-import { UserNav } from '@/app/(protected)/(routes)/dashboard/components/user-nav';
+import { CalendarDateRangePicker } from '@/app/(protected)/(routes)/(user)/dashboard/components/date-range-picker';
+import { MainNav } from '@/app/(protected)/(routes)/(user)/dashboard/components/main-nav';
+import { Overview } from '@/app/(protected)/(routes)/(user)/dashboard/components/overview';
+import { RecentSales } from '@/app/(protected)/(routes)/(user)/dashboard/components/recent-sales';
+import { Search } from '@/app/(protected)/(routes)/(user)/dashboard/components/search';
+import TeamSwitcher from '@/app/(protected)/(routes)/(user)/dashboard/components/team-switcher';
+import { UserNav } from '@/app/(protected)/(routes)/(user)/dashboard/components/user-nav';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
-  description: 'Example dashboard app built using the components.',
+  description: 'Global Freight Carriers user dashboard.',
 };
 
 export default function DashboardPage() {
@@ -28,14 +28,14 @@ export default function DashboardPage() {
     <>
       <div className="md:hidden">
         <Image
-          src="/examples/dashboard-light.png"
+          src="/images/dashboard-light.png"
           width={1280}
           height={866}
           alt="Dashboard"
           className="block dark:hidden"
         />
         <Image
-          src="/examples/dashboard-dark.png"
+          src="/images/dashboard-dark.png"
           width={1280}
           height={866}
           alt="Dashboard"
