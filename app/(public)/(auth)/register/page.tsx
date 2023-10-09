@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
-import { UserAuthForm } from '@/app/(public)/(auth)/components/user-auth-form';
+import { UserAuthForm } from '@/app/(public)/(auth)/register/components/user-auth-form';
 
 export const metadata: Metadata = {
   title: 'Authentication',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'Authentication into the Global Freight Carriers, LLC dashboard.',
 };
 
-export default function AuthenticationPage() {
+export default function RegistrationPage() {
   return (
     <>
       <div className="md:hidden">
@@ -33,7 +33,7 @@ export default function AuthenticationPage() {
       </div>
       <div className="container relative hidden h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
-          href="/auth/login"
+          href="/login"
           className={cn(
             buttonVariants({ variant: 'ghost' }),
             'absolute right-4 top-4 md:right-8 md:top-8'

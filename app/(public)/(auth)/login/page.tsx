@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Container from '@/components/ui/container';
-import { UserAuthForm } from '../components/user-auth-form';
+import { UserAuthForm } from './components/user-auth-form';
 
 const LoginPage = () => {
   return (
