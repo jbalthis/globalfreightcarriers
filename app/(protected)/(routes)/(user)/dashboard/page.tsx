@@ -15,12 +15,11 @@ import { MainNav } from '@/app/(protected)/(routes)/(user)/dashboard/components/
 import { Overview } from '@/app/(protected)/(routes)/(user)/dashboard/components/overview';
 import { RecentSales } from '@/app/(protected)/(routes)/(user)/dashboard/components/recent-sales';
 import { Search } from '@/app/(protected)/(routes)/(user)/dashboard/components/search';
-import TeamSwitcher from '@/app/(protected)/(routes)/(user)/dashboard/components/team-switcher';
 import { UserNav } from '@/app/(protected)/(routes)/(user)/dashboard/components/user-nav';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
-  description: 'Global Freight Carriers user dashboard.',
+  description: 'Global Freight Carriers User dashboard.',
 };
 
 export default function DashboardPage() {
@@ -45,7 +44,6 @@ export default function DashboardPage() {
       <div className="hidden flex-col md:flex">
         <div className="border-b">
           <div className="flex h-16 items-center px-4">
-            <TeamSwitcher />
             <MainNav className="mx-6" />
             <div className="ml-auto flex items-center space-x-4">
               <Search />

@@ -94,7 +94,7 @@ const NavbarActions = () => {
                 >
                   Login
                 </Button>
-                <Link href="/auth">
+                <Link href="/register">
                   <span className="text-sm text-blue-600">Or, Register</span>
                 </Link>
               </div>
