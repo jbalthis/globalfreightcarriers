@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter_Tight } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
 
-const inter = Inter({ subsets: ['latin'] });
+const interTight = Inter_Tight({ subsets: ['latin'], weight: '300' });
 
 export const metadata: Metadata = {
   title: 'Global Freight Carriers, LLC',
@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body className={interTight.className}>
+        <main className="h-screen">{children}</main>
         <Toaster />
       </body>
     </html>

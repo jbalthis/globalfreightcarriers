@@ -4,19 +4,18 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 interface PublicLayoutProps {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
-
   return (
-    <>
-        <Navbar />
-        {/*<Sidebar />*/}
-        {children}
-        <Footer />
-    </>
-  )
-}
+    <div className="h-full">
+      <Navbar />
+      {/*<Sidebar />*/}
+      {children}
+      <Footer />
+    </div>
+  );
+};
 
-export default PublicLayout
+export default PublicLayout;

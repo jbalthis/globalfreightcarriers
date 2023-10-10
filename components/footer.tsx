@@ -7,7 +7,7 @@ import SocialLinks from './social-links';
 
 const Footer = () => {
   return (
-    <div className="grid grid-rows-2">
+    <div className="flex flex-col grow">
       <div className="flex bg-gray-800 text-white justify-between gap-4 p-8">
         <div className="flex flex-col items-center px-4">
           <Image src="/images/logo.png" width={200} height={50} alt="logo" />

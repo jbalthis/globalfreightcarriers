@@ -33,7 +33,7 @@
     "app/*/*.tsx",
     "app/(public)/components/*.tsx",
     "app/(protected)/*.tsx",
-    "app/(protected)/*/*.tsx",
+    "app/(protected)/**/*.tsx",
     "providers/*.tsx"
   ],
   "exclude": ["node_modules"]
