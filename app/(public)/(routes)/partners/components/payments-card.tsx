@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const PaymentsCard = () => {
   return (
     <Card className="w-[80%] border-none shadow-none my-8 mx-auto">
-      <CardContent className="ml-4 flex sm:flex-row flex-col justify-between">
+      <CardContent className="ml-4 flex sm:flex-row flex-col justify-between gap-4">
         <div className="order-last">
           <CardHeader className="text-2xl font-semibold text-gray-800">
             Freight carrier payments

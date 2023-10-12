@@ -12,7 +12,7 @@ const Options = () => {
         With freight from 105,000 shippers, we offer more options to find and
         book the loads you want to haul.
       </p>
-      <div className="sm:flex sm:flex-row grid grid-cols-2 gap-4 items-center w-full mx-auto py-8 px-12">
+      <div className="md:flex md:flex-row grid grid-cols-2 gap-4 items-center w-full mx-auto py-8 px-12">
         <Image
           src="/images/pepsico-logo.png"
           alt="pepsi"

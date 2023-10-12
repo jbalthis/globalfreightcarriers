@@ -16,7 +16,7 @@ const BoardCard = () => {
   const router = useRouter();
   return (
     <div className="grid grid-cols-1 w-full min-h-[600px] place-items-center">
-      <Card className="w-[80%] border-none shadow-none my-8 mx-auto">
+      <Card className="w-[80%] border-none shadow-none my-8 mx-auto gap-4">
         <CardContent className="ml-4 flex sm:flex-row flex-col justify-between">
           <Image
             src="/images/board.jpg"
