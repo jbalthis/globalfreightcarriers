@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <div className="w-full h-min-[600px] bg-slate-200 p-8">
       <div className="w-[75%] mx-auto px-4 py-8 flex flex-col justify-between">
-        <Link href="#" className="">
+        <Link href="/testimonials" className="">
           <QuoteIcon width={80} height={80} className="text-gray-300" />
           <p className="text-blue-800 font-bold text-xs">
             WHAT PEOPLE ARE SAYING

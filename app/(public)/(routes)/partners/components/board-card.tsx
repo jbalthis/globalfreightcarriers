@@ -40,7 +40,9 @@ const BoardCard = () => {
                 variant="outline"
                 size="lg"
                 className="text-md p-8 outline outline-1"
-                onClick={() => router.push('/register')}
+                onClick={() =>
+                  router.push('https://globalfreight.logisticallytms.com')
+                }
               >
                 View load board
               </Button>
