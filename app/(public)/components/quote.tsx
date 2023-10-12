@@ -6,7 +6,7 @@ import { ArrowRightCircle } from 'lucide-react';
 
 const Quote = () => {
   return (
-    <div className="flex flex-col xl:flex-row justify-between p-4">
+    <div className="flex flex-col md:flex-row justify-between p-4">
       <div className="basis-1/2 p-8">
         <h1 className="text-3xl font-bold mb-12">Get a Quote</h1>
         <p className="text-xl font-semibold my-8">
