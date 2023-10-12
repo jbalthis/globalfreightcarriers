@@ -37,12 +37,12 @@ const NavbarActions = () => {
   };
 
   return (
-    <div className="flex items-center ml-4">
+    <div className="md:flex items-center ml-4 hidden">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="flex items-center rounded-full bg-slate-700 px-4 py-2">
             <UserCircle size={20} color="white" />
-            <span className="ml-2 text-sm font-medium text-white">Log In</span>
+            <span className="ml-2 text-sm font-medium text-white">Login</span>
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-80">

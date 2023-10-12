@@ -11,7 +11,7 @@ const MainNav = ({}) => {
   const routes = useRoutes();
 
   return (
-    <ul role="list" className="flex flex-col lg:flex-row list-none lg:ml-auto">
+    <ul role="list" className="flex flex-col md:flex-row list-none lg:mx-auto">
       {routes.map((item) => (
         <PublicItem
           key={item.label}

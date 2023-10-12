@@ -33,29 +33,28 @@ const Navbar: React.FC<NavbarProps> = async ({ className, children }) => {
         </SheetContent>
       </Sheet> */}
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 border border-b shadow-sm">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div className="container px-4 mx-auto flex flex-row items-center justify-between">
           <div className="w-full relative flex justify-between xl:w-auto xl:static xl:block xl:justify-between">
             <Link
               href="/"
               className="text-lg font-bold leading-relaxed inline-block whitespace-nowrap uppercase text-gray-800"
             >
               <Image
-                src="/images/globe-logo.png"
+                src="/images/logo-wide.png"
                 alt="Logo"
-                width={40}
-                height={40}
+                width={300}
+                height={100}
                 className="inline-block mr-4 whitespace-nowrap"
               />
-              Global Freight Carriers
             </Link>
             <Button
-              className="text-gray-800 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block xl:hidden outline-none focus:outline-none"
+              className="text-gray-800 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               // onClick={() => setIsOpen(true)}
             >
               <HamburgerMenuIcon />
             </Button>
           </div>
-          <div className="xl:flex shrink items-center gap-8 justify-between hidden">
+          <div className="md:flex shrink items-center gap-8 justify-between hidden">
             <MainNav />
 
             <NavbarActions />
