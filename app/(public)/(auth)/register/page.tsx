@@ -17,7 +17,7 @@ export default function RegistrationPage() {
     <>
       <div className="md:hidden">
         <Image
-          src="/images/authentication-light.jpg"
+          src="/images/authentication-light.png"
           width={1280}
           height={843}
           alt="Authentication"
@@ -42,8 +42,8 @@ export default function RegistrationPage() {
           Login
         </Link>
         <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="absolute inset-0 bg-zinc-900" />
-          <div className="relative z-20 flex items-center text-lg font-medium gap-2">
+          <div className="absolute inset-0 bg-[url('/images/registration.jpg')]  bg-zinc-900 " />
+          <div className="relative z-20 flex items-center text-lg font-medium gap-2 ">
             <Image
               src="/images/globe-logo.png"
               alt="globe-logo"
