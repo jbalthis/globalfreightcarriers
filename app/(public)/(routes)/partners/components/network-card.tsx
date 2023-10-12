@@ -17,7 +17,7 @@ const NetworkCard = () => {
   return (
     <div className="grid grid-cols-1 bg-gray-200 w-full min-h-[600px] place-items-center">
       <Card className="w-[80%] border-none shadow-none bg-gray-200 my-8 mx-auto">
-        <CardContent className="ml-4 flex sm:flex-row flex-col justify-between">
+        <CardContent className="ml-4 flex md:flex-row flex-col justify-between">
           <div className="object-last">
             <CardHeader className="text-4xl font-semibold text-gray-800">
               Join our network of freight carriers

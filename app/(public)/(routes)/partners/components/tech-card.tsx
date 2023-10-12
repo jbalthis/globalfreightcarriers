@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const TechCard = () => {
   return (
     <Card className="w-[80%] border-none shadow-none my-8 mx-auto">
-      <CardContent className="ml-4 flex sm:flex-row flex-col justify-betwee gap-4">
+      <CardContent className="ml-4 flex md:flex-row flex-col justify-betwee gap-4">
         <div className="order-last">
           <CardHeader className="text-2xl font-semibold text-gray-800">
             Carrier technology

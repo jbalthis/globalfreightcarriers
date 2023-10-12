@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col grow">
       <div className="flex md:flex-row flex-col bg-gray-800 text-white justify-between gap-4 p-8">
-        <div className="flex flex-col md:flex-1 max-w-[25%] items-center px-4">
+        <div className="flex flex-col flex-1 md:max-w-[25%] items-center px-4">
           <Image src="/images/logo.png" width={200} height={50} alt="logo" />
           <p className="text-sm mt-8">
             We Ship Anything & Everything: Frozen/Reefers, LTL, Full Loads,
@@ -41,7 +41,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="hidden md:flex md:flex-col items-center">
+        <div className="hidden md:flex md:flex-col mx-auto items-center">
           <h1 className="text-xl font-bold">Services</h1>
           <ul className="mt-4">
             <li className="text-md my-2">
@@ -86,7 +86,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col mx-auto items-center">
           <h1 className="text-xl font-bold">Business Hours</h1>
           <p className="text-md mt-4">7am - 7pm M-F</p>
         </div>

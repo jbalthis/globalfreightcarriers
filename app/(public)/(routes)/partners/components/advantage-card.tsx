@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const AdvantageCard = () => {
   return (
     <Card className="w-[80%] border-none shadow-none my-8 mx-auto">
-      <CardContent className="ml-4 flex sm:flex-row flex-col justify-between gap-4">
+      <CardContent className="ml-4 flex md:flex-row flex-col justify-between gap-4">
         <Image
           src="/images/office.jpg"
           alt="tech"
