@@ -1,7 +1,12 @@
 import React from 'react';
+import ResourcesJumbotron from './components/resources-jumbotron';
 
 const ResourcesPage = () => {
-  return <div>ResourcesPage</div>;
+  return (
+    <div>
+      <ResourcesJumbotron />
+    </div>
+  );
 };
 
 export default ResourcesPage;

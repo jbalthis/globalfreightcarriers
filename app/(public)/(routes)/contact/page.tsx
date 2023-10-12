@@ -1,11 +1,12 @@
 import React from 'react';
 
 import ContactForm from './components/contact-form';
+import ContactJumbotron from './components/contact-jumbotron';
 
 const ContactPage = () => {
   return (
     <>
-      <div>ContactPage</div>
+      <ContactJumbotron />
       <ContactForm />
     </>
   );

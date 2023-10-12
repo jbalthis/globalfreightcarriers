@@ -1,7 +1,12 @@
 import React from 'react';
+import CarriersJumbotron from './components/carriers-jumbotron';
 
 const CarriersPage = () => {
-  return <div>CarriersPage</div>;
+  return (
+    <div>
+      <CarriersJumbotron />
+    </div>
+  );
 };
 
 export default CarriersPage;

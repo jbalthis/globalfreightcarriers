@@ -1,7 +1,12 @@
 import React from 'react';
+import TechnologiesJumbotron from './components/technologies-jumbotron';
 
 const TechnologiesPage = () => {
-  return <div>TechnologiesPage</div>;
+  return (
+    <div>
+      <TechnologiesJumbotron />
+    </div>
+  );
 };
 
 export default TechnologiesPage;
