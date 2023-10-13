@@ -29,16 +29,17 @@ const Hero = () => {
         bg-cover
         bg-no-repeat
         bg-center
+        px-8
       `}
       >
         <div
-          className={`flex-1 ${styles.flexStart} flex-col xl:px-4 sm:px-16 px-6 py-6 gap-8`}
+          className={`flex-1 ${styles.flexStart} flex-col xl:px-4 sm:px-16 px-8 gap-8`}
         >
           <div
-            className={`flex flex-row items-center py-4 px-4 ${bg_discount_gradient} rounded-[10px] mb-4`}
+            className={`flex flex-row items-center py-2 px-2 ${bg_discount_gradient} rounded-[10px] mb-4`}
           >
             <AreaChart className="w-[24px] h-[24px] text-white mx-2" />
-            <p className={`${styles.paragraph} ml-4`}>
+            <p className={`${styles.paragraph} ml-4 text-sm`}>
               <span className="text-white">
                 Over <span className="italic text-lime-300">20 years</span>{' '}
                 Freight Shipping Experience with the
@@ -65,7 +66,7 @@ const Hero = () => {
               Tranquility.
             </h1>
           </div>
-          <div className="ss:flex hidden md:mr-4 mr-0">
+          <div className="ss:flex hidden md:mr-4 mr-8">
             <GetStarted />
           </div>
 
@@ -77,7 +78,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className={`ss:hidden ${styles.flexCenter} mr-4`}>
+        <div className={`ss:hidden ${styles.flexCenter} mt-4`}>
           <GetStarted />
         </div>
       </div>

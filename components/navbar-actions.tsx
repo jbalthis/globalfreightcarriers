@@ -86,7 +86,7 @@ const NavbarActions = () => {
                 <Button
                   onClick={() =>
                     signIn('credentials', {
-                      callbackUrl: 'http://localhost:3000/dashboard',
+                      callbackUrl: 'http://mygfcarrier.com/dashboard',
                       email: credentials.email,
                       password: credentials.password,
                     })
