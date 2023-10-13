@@ -3,60 +3,64 @@
 import PublicItem from './public-item';
 import useRoutes from '@/hooks/use-routes';
 import { useState } from 'react';
-import { Avatar } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User } from '@prisma/client';
+import { Separator } from '@/components/ui/separator';
+import { UserCircle } from 'lucide-react';
 
 interface SidebarProps {
   currentUser?: User;
-  openSidebar?: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ currentUser, openSidebar }) => {
+const Sidebar: React.FC<SidebarProps> = ({ currentUser }) => {
   const routes = useRoutes();
-  const [isOpen, setIsOpen] = useState(openSidebar);
 
   console.log({ currentUser }, 'TEST');
 
   return (
     <>
-      <div
-        className={`${isOpen ? ' block' : ' hidden'}
-          lg:fixed
-        lg:inset-y-0
-        lg:left-0
-        lg:z-40
-        lg:w-20
-        xl:px-6
-        lg:overflow-y-auto
-        lg:bg-white
-        lg:border-r-[1px]
-        lg:pb-4
-        lg:flex
-        lg:flex-col
-        justify-between`}
-      >
-        <nav className="mt-4 flex flex-col justify-between">
-          <ul role="list" className="flex flex-col items-center space-y-1">
-            {routes.map((item) => (
-              <PublicItem
-                key={item.label}
-                href={item.href}
-                label={item.label}
-                icon={item.icon}
-                active={item.active}
-              />
-            ))}
-          </ul>
-        </nav>
-        <nav className="mt-4 flex flex-col justify-between items-center">
-          <div
-            onClick={() => setIsOpen(false)}
-            className="cursor-pointer hover:opacity-75 transition"
-          >
-            {/* <Avatar user={currentUser} /> */}
+      <Separator className="border border-blue-800/10" />
+      <nav className="mt-4 flex justify-between">
+        <ul role="list" className="flex flex-col space-y-1">
+          {routes.map((item) => (
+            <PublicItem
+              key={item.label}
+              href={item.href}
+              label={item.label}
+              icon={item.icon}
+              active={item.active}
+            />
+          ))}
+        </ul>
+      </nav>
+      <Separator className="my-4 border border-blue-800/10" />
+      <nav className="mt-4 flex flex-col justify-between">
+        <div
+          className="
+            cursor-pointer
+            transition 
+            text-gray-500 
+            pl-1 
+            text-sm 
+            leading-6 
+            font-semibold 
+            hover:text-black 
+            hover:bg-gray-100
+            flex
+            flex-row
+          "
+        >
+          <Avatar>
+            <AvatarImage />
+            <AvatarFallback>
+              <UserCircle />
+            </AvatarFallback>
+          </Avatar>
+          <div className="inline-block mt-2 ml-2">
+            {!currentUser ? 'Account Login' : 'Welcome back'}
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </>
   );
 };

@@ -27,7 +27,7 @@ const NavbarActions = () => {
 
   const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:3000/api/auth/authorize', {
+    const res = await fetch('/api/auth/authorize', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
