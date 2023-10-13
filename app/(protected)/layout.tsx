@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthContext from '@/providers/auth-context-provider';
+import { ClerkProvider } from '@clerk/nextjs';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import Navbar from '@/components/navbar';
@@ -17,11 +18,11 @@ const AuthLayout: React.FC<AuthLayoutProps> = async ({ children }) => {
 
   return (
     <>
-      <AuthContext session={session}>
+      <ClerkProvider>
         <Navbar />
         {children}
         <Footer />
-      </AuthContext>
+      </ClerkProvider>
     </>
   );
 };

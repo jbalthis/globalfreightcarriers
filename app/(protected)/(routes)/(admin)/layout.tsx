@@ -2,8 +2,8 @@ import React from 'react';
 import { Session } from '@prisma/client';
 import { getSession } from 'next-auth/react';
 
-const AuthUserLayout = ({ children }: { children: React.ReactNode }) => {
-  const session = getSession();
+const AuthAdminLayout = async ({ children }: { children: React.ReactNode }) => {
+  const session = await getSession();
 
   if (!session) {
     console.log('no session found');
@@ -13,4 +13,4 @@ const AuthUserLayout = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-export default AuthUserLayout;
+export default AuthAdminLayout;
