@@ -6,7 +6,6 @@ import type {
 import type { NextAuthOptions as NextAuthConfig } from 'next-auth';
 import { getServerSession } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import GoogleProvider from 'next-auth/providers/google';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -44,12 +43,8 @@ export function auth(
 }
 
 export const options = {
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(prisma) as any,
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }),
     CredentialsProvider({
       name: 'credentials',
       credentials: {
@@ -88,9 +83,21 @@ export const options = {
     }),
   ],
   callbacks: {
-    async jwt({ token }) {
-      token.userRole = 'admin';
+    async jwt({ token, user, account, profile }) {
+      if (account) {
+        token.accessToken = account.access_token as string;
+        token.id = profile?.id as string;
+      }
+      if (user) {
+        token.userRole = user.role as string;
+      }
       return token;
+    },
+    async session({ session, token, user }) {
+      session.accessToken = token.access_token as string;
+      session.user.id = token.userId as string;
+      session.user.role = token.userRole as string;
+      return session;
     },
   },
   debug: process.env.NODE_ENV === 'development',

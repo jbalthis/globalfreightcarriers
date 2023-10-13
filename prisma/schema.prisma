@@ -22,6 +22,8 @@ model User {
   profile        Profile[]
   session        Session[]
   account        Account[]
+
+  @@unique([id, role])
 }
 
 model Post {
@@ -52,6 +54,7 @@ model Session {
   sessionToken String   @unique
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId       String   @map("user_id") @db.ObjectId
+  userRole     String   @map("user_role") @db.ObjectId
 }
 
 model Account {
