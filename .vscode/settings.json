@@ -1,6 +1,6 @@
 {
-  "WillLuke.nextjs.addTypesOnSave": true,
-  "WillLuke.nextjs.hasPrompted": true,
+  //"WillLuke.nextjs.addTypesOnSave": true,
+  //"WillLuke.nextjs.hasPrompted": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.probe": [
     "javascript",
@@ -9,7 +9,9 @@
     "typescriptreact",
     "html"
   ],
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // Runs Prettier, then ESLint
-  "editor.codeActionsOnSave": []
+  "editor.codeActionsOnSave": [],
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }

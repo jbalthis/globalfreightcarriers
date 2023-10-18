@@ -14,7 +14,7 @@ const GetStarted = () => {
   return (
     <div
       className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full ${bg_blue_gradient} p-[2px] cursor-pointer`}
-      onClick={() => router.push('/register')}
+      onClick={() => router.push('/sign-up')}
     >
       <div
         className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}

@@ -1,8 +1,13 @@
-import Hero from '../components/hero';
-import Quote from '../components/quote';
-import Cards from '../components/cards';
-import Newsletter from '../components/newsletter';
+import Hero from './components/hero';
+import Quote from './components/quote';
+import Cards from './components/cards';
+import Newsletter from './components/newsletter';
 import { Separator } from '@/components/ui/separator';
+import FaqSection from './components/faq-section';
+import ContactSection from './components/contact-section';
+import TrustedSection from './components/trusted-section';
+import TeamSection from './components/team-section';
+import TestimonialsSection from './components/testimonials-section';
 
 export default function Home() {
   return (
@@ -11,8 +16,14 @@ export default function Home() {
       <Quote />
       <Separator />
       <Cards />
+      <TrustedSection />
       <Separator />
       <Newsletter />
-    </div>
+      <Separator />
+      <TeamSection />
+      <TestimonialsSection />
+      <FaqSection />
+      <ContactSection />
+    </div>  
   );
 }

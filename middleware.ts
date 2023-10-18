@@ -4,13 +4,14 @@ export default authMiddleware({
   publicRoutes: [
     '/',
     '/about',
-    'carriers',
-    'contact',
-    'faq',
-    'partners',
-    'resources',
-    'technologies',
-    'testimonials',
+    '/carriers',
+    '/contact',
+    '/faq',
+    '/partners',
+    '/resources',
+    '/technologies',
+    '/testimonials',
+    '/quote',
   ],
 });
 

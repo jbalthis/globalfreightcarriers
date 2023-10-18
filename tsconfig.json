@@ -31,7 +31,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/*/*.tsx",
-    "app/(public)/components/*.tsx",
+    "app/(public)/(routes)/components/*.tsx",
     "app/(protected)/*.tsx",
     "app/(protected)/**/*.tsx",
     "providers/*.tsx"

@@ -15,6 +15,12 @@ import MainNav from '@/components/main-nav';
 import Sidebar from '@/components/sidebar';
 import NavbarActions from '@/components/navbar-actions';
 import Container from '@/components/ui/container';
+import { 
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton, 
+} from '@clerk/nextjs';
 
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 

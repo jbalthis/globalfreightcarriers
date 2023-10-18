@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col justify-between gap-2 w-full">
-            <h1 className="font-poppins font-semibold ss:text-[72px] text-[52px] text-indigo-900 ss:leading-[100.8px] leading-[75px]">
+            <h1 className="font-poppins font-semibold ss:text-[72px] text-[52px] text-indigo-500 ss:leading-[100.8px] leading-[75px]">
               Trust.
             </h1>
             <h1

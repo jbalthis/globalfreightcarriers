@@ -164,6 +164,7 @@ const Cards = () => {
           </Link>
         </CardFooter>
       </Card>
+      
     </div>
   );
 };

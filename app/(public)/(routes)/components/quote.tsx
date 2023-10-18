@@ -1,7 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 
-import QuoteForm from './quote-form';
+import QuoteForm from '../quote/components/quote-form';
 import { ArrowRightCircle } from 'lucide-react';
 
 const Quote = () => {
@@ -78,14 +77,6 @@ const Quote = () => {
         <p className="italic my-8">
           Complete our form for a Free Quote on your next shipment!
         </p>
-        <Image
-          src="/images/quote-truck.jpg"
-          width={500}
-          height={500}
-          alt="truck"
-          className="rounded-md mx-auto py-4"
-          style={{ objectFit: 'cover' }}
-        />
       </div>
       <div className="basis-1/2 p-8">
         <QuoteForm />

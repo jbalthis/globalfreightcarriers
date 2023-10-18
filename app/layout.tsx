@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter_Tight } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const interTight = Inter_Tight({ subsets: ['latin'], weight: '300' });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <ClerkProvider>
       <body className={interTight.className}>
         <main className="h-screen">{children}</main>
         <Toaster />
       </body>
+      </ClerkProvider>
     </html>
   );
 }
