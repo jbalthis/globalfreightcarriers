@@ -9,9 +9,7 @@ const ResourcesJumbotron = () => {
           Resources to grow with
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-          Here at Global Freight Carriers we take advantage of as many renewable
-          resources that are currently available and welcome any new ones in the
-          years to come.
+          Freight market insights and supply chain resources to help drive better outcomes for your busines
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a

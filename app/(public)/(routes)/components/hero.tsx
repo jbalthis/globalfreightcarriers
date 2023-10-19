@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="absolute top-100 left-0 w-full h-full overflow-hidden bg-[hsla(0,0%,0%,1.90] bg-fixed" />
+      
       <div
         className={`
         flex

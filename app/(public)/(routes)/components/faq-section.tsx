@@ -14,7 +14,7 @@ const FaqSection = () => {
               Let us answer your questions
             </h5>
 
-            <p className="mb-4 font-bold">
+            {/* <p className="mb-4 font-bold">
               Anim pariatur cliche reprehenderit?
             </p>
             <p className="mb-6 text-gray-500 dark:text-neutral-300">
@@ -44,7 +44,7 @@ const FaqSection = () => {
               Minima sunt at nulla tenetur, numquam unde quod modi magnam ab
               deserunt ipsam sint aliquid dolores libero repellendus
               cupiditate mollitia quidem dolorem.
-            </p>
+            </p> */}
           </div>
         </div>
 

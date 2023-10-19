@@ -8,6 +8,7 @@ import ContactSection from './components/contact-section';
 import TrustedSection from './components/trusted-section';
 import TeamSection from './components/team-section';
 import TestimonialsSection from './components/testimonials-section';
+import LtlSection from './components/ltl-section';
 
 export default function Home() {
   return (
@@ -15,12 +16,13 @@ export default function Home() {
       <Hero />
       <Quote />
       <Separator />
+      <LtlSection />
       <Cards />
       <TrustedSection />
       <Separator />
       <Newsletter />
       <Separator />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <TestimonialsSection />
       <FaqSection />
       <ContactSection />

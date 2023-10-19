@@ -14,8 +14,7 @@ const AboutPage = () => {
           <span className="text-primary dark:text-primary-400">for an adventure?</span>
         </h2>
         <p className="text-lg text-neutral-500 dark:text-neutral-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-          officia consequatur adipisci tenetur repudiandae rerum quos.
+          Our staff is ready to help you meet any of your shipping issues that may arise.
         </p>
       </div>
     </div>

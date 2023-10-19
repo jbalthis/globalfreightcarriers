@@ -9,9 +9,7 @@ const TechnologiesJumbotron = () => {
           Cutting edge technologies for shipping in a modern world
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-          Here at Global Freight Carriers we try to stay ahead of the curve and
-          get the most out of every cent spent with us by using the most cutting
-          edge technologies on the market.
+          Our technology is built by and for supply chain experts to bring faster, more meaningful improvements to you
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
