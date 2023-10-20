@@ -12,6 +12,8 @@ export default authMiddleware({
     '/technologies',
     '/testimonials',
     '/quote',
+    '/api/quote',
+    '/api/contact'
   ],
 });
 

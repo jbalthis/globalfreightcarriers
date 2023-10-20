@@ -12,7 +12,7 @@ const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>> = ({
   message,
 }) => (
   <div>
-    <h1>{message.name} is requesting a quote.</h1>
+    <h1>{message.name} messaged you.</h1>
     <p>Here are the details:</p>
     <ul>
       <li>Name: {message.name}</li>

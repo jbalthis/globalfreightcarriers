@@ -1,3 +1,4 @@
+'use client'
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -5,8 +6,8 @@ interface PublicItemProps {
   label: string;
   icon: any;
   href: string;
-  onClick?: () => void;
   active?: boolean;
+  setOpen: () => void;
 }
 
 const PublicItem: React.FC<PublicItemProps> = ({
@@ -14,20 +15,18 @@ const PublicItem: React.FC<PublicItemProps> = ({
   href,
   icon: Icon,
   active,
-  onClick,
+  setOpen
 }) => {
+
   const handleClick = () => {
-    if (onClick) {
-      return onClick();
-    }
+     return setOpen(false);
   };
 
   return (
     <li onClick={handleClick} key={label}>
       <Link
         href={href}
-        className={clsx(
-          `
+        className={clsx(`
             group 
             flex 
             gap-x-3 

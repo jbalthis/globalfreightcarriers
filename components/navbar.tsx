@@ -30,6 +30,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ className, children }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 border border-b shadow-sm">
@@ -47,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, children }) => {
                 className="inline-block mr-4 whitespace-nowrap"
               />
             </Link>
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <HamburgerMenuIcon
                   className="lg:hidden cursor-pointer my-2"
@@ -70,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, children }) => {
                 </SheetHeader>
 
                 <div className="mt-8">
-                  <Sidebar />
+                  <Sidebar setOpen={setOpen} />
                 </div>
               </SheetContent>
             </Sheet>

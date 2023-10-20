@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const message = await request.json();
   console.log(message);
 
-  try {
+  try {//@ts-ignore
     const data = await resend.emails.send({
       from: 'Contact Us <info@mygfcarrier.com>',
       to: ['tjc@mygfcarrier.com', 'tom@mygfcarrier.com', 'jbalthis@barelyjason.online'],

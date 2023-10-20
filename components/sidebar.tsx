@@ -10,9 +10,10 @@ import { UserCircle } from 'lucide-react';
 
 interface SidebarProps {
   currentUser?: User;
+  setOpen?: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ currentUser }) => {
+const Sidebar: React.FC<SidebarProps> = ({ currentUser, open, setOpen }) => {
   const routes = useRoutes();
 
   console.log({ currentUser }, 'TEST');
@@ -29,6 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentUser }) => {
               label={item.label}
               icon={item.icon}
               active={item.active}
+              setOpen={setOpen}
             />
           ))}
         </ul>
