@@ -26,6 +26,154 @@ model User {
   @@unique([id, role])
 }
 
+model Carrier {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  tmsCarrierId          String
+  billingEmail          String
+  name                  String
+  isBolBarcodeHidden    Boolean
+  isDirectOnly          Boolean
+  isDockHoursOnBol      Boolean
+  isPickupNumOnBol      Boolean
+  isQuoteNumOnBol       Boolean
+  contactEmail          String
+  contactFax            String
+  contactName           String
+  contactPhone          String
+  contactPhoneExt       String
+  dotNumber             String
+  factoringCompany      String
+  faxCountryCode        String
+  isActive              Boolean
+  isBlacklisted         Boolean
+  isDimsRequired        Boolean
+  isHidden              Boolean
+  isLtlQuotable         Boolean
+  isReeferLtlQuotable   Boolean
+  isRmisCertified       Boolean
+  isTenderingEnabled    Boolean
+  isTest                Boolean
+  isTlQuotable          Boolean
+  isVltlQuotable        Boolean
+  mcNumber              String
+  mcpAssureAdvantageEnabled   Boolean
+  mcpRiskAssessment           Boolean
+  phoneCountryCode      String
+  quotableLoadTypes     String
+  quoteEmail            String
+  rmisEnabled           Boolean
+  rmisNonCertifiedReasons     String
+  saferwatchCertStatus  String
+  saferwatchEnabled     Boolean
+  saferwatchRiskAssessment    String
+  scac                  String
+  shipmentTerms         String
+  tenderEmail           String
+}
+
+model Customer {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  tmsCustomerId   String
+  name            String
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  billingAddress  String
+  mailingAddress  String
+  isActive        Boolean
+  referenceNumber String?
+}
+
+
+
+model Shipment {
+  id                            String   @id @default(auto()) @map("_id") @db.ObjectId
+  tmsShipmentId                 String
+  createdAt                     DateTime  @default(now())
+  updatedAt                     DateTime  @updatedAt
+  accountId                     String
+  accountManagerEmail           String
+  accountManagerFullName        String
+  accountManagerUserId          String
+  actualDeliveryDate            String
+  bolNumber                     String?
+  carrierAgentEmail             String
+  carrierAgentFullName          String
+  carrierAgentId                String
+  carrierConfirmationNumber     String
+  carrierId                     String
+  carrierName                   String
+  carrierQuotedTotalCost        String
+  carrierScac                   String?
+  createDate                    String
+  createdBy                     String
+  tmsCustomerId                 String
+  customerName                  String
+  customerNotes                 String?
+  destination                   String
+  destinationAddress1           String
+  destinationAddress2           String?
+  destinationCity               String
+  destinationCountryCode        String
+  destinationCustomerLocationId String
+  destinationName               String?
+  destinationPostalCode         String
+  destinationStateProvince      String
+  friendlyName                  String?
+  hasCost                       Boolean
+  hasPod                        Boolean
+  hash                          String?
+  isArchived                    Boolean
+  isCroker                      Boolean
+  isCoreCarrier                 Boolean
+  isCustomerInvoiced            Boolean
+  isHazardous                   Boolean
+  isSmartway                    Boolean
+  isTest                        Boolean
+  isUpgraded                    Boolean
+  loadCurrency                  String?
+  loadType                      String
+  miscDescription               String?
+  miscOrderDate                 String?
+  numSkids                      String
+  operationsAgentEmail          String
+  operationsAgentFullName       String
+  operationsAgentId             String
+  orderCurrency                 String?
+  orderCurrentStatus            String?
+  orderId                       String?
+  orderNumber                   String?
+  orderType                     String?
+  origin                        String
+  originAddress1                String
+  originAddress2                String?
+  originAppointmentDate         String
+  originAppointmentTime         String
+  originCity                    String
+  originCountryCode             String
+  originCustomerLocationId      String
+  originName                    String?
+  originPostalCode              String
+  originStateProvince           String
+  plannedDeliveryDate           String
+  poNumbers                     String?
+  proNumber                     String?
+  salesAccount                  String
+  salesRepEmail                 String
+  salesRepFullName              String
+  salesRepId                    String
+  scac                          String?
+  shipmentCurrentStatus         String
+  shipmentDate                  String
+  shipmentTerms                 String
+  shipperNumbers                String?
+  totalCost                     String
+  totalLinearFeet               String
+  totalWeight                   String
+  trackingViewState             Boolean?
+  transitDays                   String?
+  weightUom                     String?
+}
+
 model Post {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt DateTime @default(now())

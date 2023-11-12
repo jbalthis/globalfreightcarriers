@@ -1,6 +1,4 @@
 {
-  //"WillLuke.nextjs.addTypesOnSave": true,
-  //"WillLuke.nextjs.hasPrompted": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.probe": [
     "javascript",
@@ -15,9 +13,12 @@
   "WillLuke.nextjs.addTypesOnSave": true,
   "WillLuke.nextjs.hasPrompted": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

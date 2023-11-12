@@ -13,7 +13,12 @@ export default authMiddleware({
     '/testimonials',
     '/quote',
     '/api/quote',
-    '/api/contact'
+    '/api/contact',
+    '/api/payment',
+    '/api/shipments',
+    '/api/webhooks',
+    '/api/checkout',
+    '/.well-known/apple-developer-merchantid-domain-association'
   ],
 });
 

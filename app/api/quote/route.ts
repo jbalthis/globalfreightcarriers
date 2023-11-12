@@ -11,6 +11,7 @@ export async function POST(request: Request) {
   console.log(quote);
 
   try {
+    // @ts-ignore
     const data = await resend.emails.send({
       from: 'Quotes <quotes@mygfcarrier.com>',
       to: ['tjc@mygfcarrier.com', 'tom@mygfcarrier.com', 'jbalthis@barelyjason.online'],

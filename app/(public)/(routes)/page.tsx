@@ -23,7 +23,7 @@ export default function Home() {
       <Newsletter />
       <Separator />
       {/* <TeamSection /> */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <FaqSection />
       <ContactSection />
     </div>  

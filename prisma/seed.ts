@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { hash } from 'bcryptjs';
+import { shipments } from '../constants/shipments.js';
+import {carriers} from '../constants/carriers.js';
 
 const prisma = new PrismaClient();
 
@@ -21,6 +23,31 @@ async function main() {
       role: 'admin',
     },
   });
+
+  // const customer = await prisma.customer.create({
+  //   data: {
+  //     name: "Tropical Auto"
+  //   },// });
+
+  shipments.forEach((item: any) => {
+    let customer = prisma.customer.create({
+      data: item
+    })
+  });
+
+  shipments.forEach((item: any) => {
+    let shipment = prisma.shipment.create({
+      data: item
+    })
+  });
+
+  carriers.forEach((item: any) => {
+    let carrier = prisma.carrier.create({
+      data: item
+    })
+  })
+
+  
 
   console.log({ adminUser });
 }
